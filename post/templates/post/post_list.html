@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <!-- 장고 템플릿 문법 -->
+        {% for post in posts %} 
+            <div>
+                <a href="{% url 'post:post_d' post.pk %}">
+                    {{post.pk}}. {{post.title}}
+                    <!-- Pk: db에 데이터를 저장할 때 매겨지는 번호 -->
+                </a>
+            </div>
+        {% endfor %}
+    </body>
+</html>
